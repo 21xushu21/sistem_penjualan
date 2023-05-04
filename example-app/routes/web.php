@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Models\Barang;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -20,5 +22,11 @@ Route::get('/', function () {
 
 Route::get('dasboard',function (){
     return view('dasboard');
-}
-);
+})->name('dasboard');
+
+Route::controller(BarangController::class)->prefix('barang')->group(function(){
+    Route::get('','index')->name('barang');
+    Route::get('tambah', 'tambah')->name('barang.tambah');
+    Route::get('edit/{id}', 'edit')->name('barang.edit');
+    Route::get('hapus/{id}', 'hapus')->name('barang.hapus');
+});

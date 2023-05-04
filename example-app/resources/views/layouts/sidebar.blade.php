@@ -16,8 +16,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('dasboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -30,11 +30,11 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Barang -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('barang') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Barang</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
